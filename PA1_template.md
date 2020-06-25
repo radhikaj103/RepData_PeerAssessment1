@@ -69,7 +69,7 @@ ggplot(data = totalSteps, aes(x = totalSteps)) +
 ## Warning: Removed 8 rows containing non-finite values (stat_bin).
 ```
 
-![](PA1_template_files/figure-html/Histogram for total steps per day-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram_for_total_steps_per_day-1.png)<!-- -->
 
 ### Calculate the mean and median of the total number of steps taken per day
 
@@ -97,7 +97,7 @@ ggplot(data = avgStepsPerInterval, aes(x = interval, y = avgSteps)) +
         xlab("Interval")
 ```
 
-![](PA1_template_files/figure-html/Time series plot for the average daily steps pattern-1.png)<!-- -->
+![](PA1_template_files/figure-html/Time_series_plot-1.png)<!-- -->
 
 ### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -143,7 +143,7 @@ ggplot(data = totalStepsNAReplaced, aes(x = totalSteps)) +
   xlab("Total steps per day")
 ```
 
-![](PA1_template_files/figure-html/Histogram for total steps per day after imputing missing values-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram_after_imputing_missing_values-1.png)<!-- -->
 
 ### Calculate and report the mean and median total number of steps taken per day
 
@@ -190,7 +190,7 @@ ggplot(data = avgStepsPerInterval, aes(x = interval, y = avgSteps)) +
         facet_wrap(~day, nrow = 2) 
 ```
 
-![](PA1_template_files/figure-html/Time series plot for the average numbers of steps by weektype-1.png)<!-- -->
+![](PA1_template_files/figure-html/Time_series_plot_by_weektype-1.png)<!-- -->
 
 The average number of steps are more consistent throughout the day on the weekends, while they peak during a certain interval on the weekdays. 
 

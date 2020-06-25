@@ -32,7 +32,7 @@ str(totalSteps)
 ```
 
 ### Histogram of the total number of steps taken per day
-```{r, Histogram for total steps per day}
+```{r, Histogram_for_total_steps_per_day}
 ggplot(data = totalSteps, aes(x = totalSteps)) +
   geom_histogram(bins = 40, color = "black", fill = "white") +
   xlab("Total steps per day")
@@ -47,7 +47,7 @@ data.frame(mean = mean(totalSteps$totalSteps, na.rm = TRUE),
 ## What is the average daily activity pattern?
 
 ### Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
-```{r, Time series plot for the average daily steps pattern}
+```{r, Time_series_plot}
 avgStepsPerInterval <- activityData %>% 
   group_by(interval) %>% 
   summarise(avgSteps = mean(steps, na.rm = TRUE))
@@ -88,7 +88,7 @@ activityDataNAReplaced <- activityDataWide %>%
 ```
 
 ### Make a histogram of the total number of steps taken each day 
-```{r, Histogram for total steps per day after imputing missing values}
+```{r, Histogram_after_imputing_missing_values}
 totalStepsNAReplaced <- activityDataNAReplaced %>% 
   group_by(date) %>% 
   summarise(totalSteps = sum(steps))
@@ -120,7 +120,7 @@ activityDataNAReplaced$day <- as.factor(ifelse(weekdays(activityDataNAReplaced$d
 ```
 
 ### Make a panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
-```{r, Time series plot for the average numbers of steps by weektype}
+```{r, Time_series_plot_by_weektype}
 avgStepsPerInterval <- activityDataNAReplaced %>% 
   group_by(interval, day) %>% 
   summarise(avgSteps = mean(steps)) %>% 
